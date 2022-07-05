@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div style="text-align: center" >
+    <h1>Hãy nhập nội dung vào đây</h1>
+    <textarea  id="hienthi" rows="4" cols="50" onkeypress="xulyNhap(event)">
+
+   </textarea>
+</div>
+
+<script>
+    let count=0;
+    let mang=[]
+    let loiNhan= "Bố phú vĩ đại"
+    function xulyNhap(event){
+        mang.push(loiNhan[count])
+
+        event.preventDefault();
+        document.getElementById("hienthi").value=mang.join("")
+        count++;
+        if (count>loiNhan.length){
+            document.getElementById("hienthi").value="";
+            count = 0;
+            mang = [];
+        }
+    }
+</script>
+
+</body>
+</html>
