@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="">
+    <button style="text-align: center" onclick="timKiem()">Search</button>
+    <br>
+    <input type="text" id="search">
+    <h1 id="ketQua"></h1>
+</form>
+<script>
+    let eng = ['go', 'ice', 'kick', 'box', 'bottle', 'update', 'read', 'delete'];
+    let vni = ['đi', 'đá lạnh', 'đá', 'hộp', 'chai', 'nâng cấp', 'đọc', 'xóa'];
+    let vitri = -1;
+
+    function timKiem() {
+        let tiengAnh = document.getElementById('search').value;
+
+        for (let i = 0; i < eng.length; i++) {
+            if (tiengAnh === eng[i]) {
+                vitri = i
+            }
+
+        }
+        if (vitri === -1) {
+            alert('Không có từ này')
+        } else {
+            alert(vni[vitri])
+
+        }
+
+    }
+
+
+</script>
+</body>
+</html>
